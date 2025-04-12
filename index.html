@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+    <div class="inputarea">
+    <h1>Simple To-Do</h1>
+
+    <div>
+    <input type="text" placeholder="Enter your task and click on btn" id="inputfeild">
+        <button class="addtask">Add Task</button>
+    </div>
+    <div class="taskitem">
+        
+    </div>
+
+    <script>
+
+        let input = document.querySelector("#inputfeild");
+
+        const addbtn = document.querySelector(".addtask");
+
+        let taskarea = document.querySelector(".taskitem") 
+
+        // Function to add a task
+        const addTask = ()=>{
+            let inputvalue = input.value.trim()
+            // if input is empty return nothing
+            if(inputvalue == "") return;
+
+
+            // Create new paragrapgh tag when the function call
+            let paraelem = document.createElement("p");
+
+            // Paragraph content is input value
+            paraelem.innerText = inputvalue;
+
+            // Append paragraph element to taskarea
+            taskarea.append(paraelem)
+
+            // Finally clear the input field value
+            input.value = "";
+        }
+
+
+        // Add task when btn was clicked
+        addbtn.addEventListener("click", ()=>{
+            addTask();
+        })
+
+         // Use event delegation to remove a task when clicked
+        taskarea.addEventListener("click", (event)=>{
+            if(event.target.tagName === "P"){
+                event.target.remove() // Remove the clicked task
+                
+            }
+        })
+         
+
+
+        // When enter btn hit add task 
+         input.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+        addTask();
+      }
+});
+    </script>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

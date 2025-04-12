@@ -1,0 +1,87 @@
+/* style.css */
+
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Body styling */
+  body {
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Main container */
+  .inputarea {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Title */
+  .inputarea h1 {
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  /* Input and button wrapper */
+  .inputarea div:first-of-type {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #inputfeild {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .addtask {
+    padding: 0.6rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addtask:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Task item styles */
+  .taskitem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .taskitem p {
+    background-color: #f8f9fa;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border-left: 4px solid #007bff;
+    transition: all 0.3s ease;
+  }
+  
+  .taskitem p:hover {
+    background-color: #e2e6ea;
+    text-decoration: line-through;
+    color: #6c757d;
+  }
+  
